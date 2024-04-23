@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Creation Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="vertical-line"></div>
+    <div class="lines"></div>
+    <script src="script.js"></script>
+    <button id="playButton" style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%);">Play</button>
+    <button id="resetButton" style="position: fixed; top: 50px; left: 50%; transform: translateX(-50%);">Reset</button>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', startSweepLine);
+        document.getElementById('resetButton').addEventListener('click', resetSweepLine);
+    </script>
+</body>
+</html>

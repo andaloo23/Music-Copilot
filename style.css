@@ -1,0 +1,69 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: #808080; /* Ensure there's a contrasting background */
+}
+
+.vertical-line {
+    position: absolute;
+    left: 20px;  /* Set the distance from the left edge of the container */
+    top: 100px;
+    bottom: 0;
+    height: 820px;
+    width: 2px;  /* Width of the vertical line */
+    background-color: black;  /* Color of the vertical line for visibility */
+    z-index: 1000;  /* Ensures it's on top of other elements */
+    pointer-events: none;  /* Allows click events to pass through */
+}
+
+.lines {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;  /* Ensure it covers the desired area */
+    padding-left: 20px;  /* Ensures content is not under the vertical line */
+    padding-top: 100px;
+}
+
+.line {
+    position: absolute;
+    width: calc(100% - 20px);  /* Adjust width to account for the shift */
+    border-top: 1px solid black;
+}
+
+.bar-divider {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5); /* Lighter opacity for division lines */
+    z-index: 500; /* Ensure they don't interfere with rectangle clicks */
+}
+
+.rectangle {
+    position: absolute;
+    background-color: blue;
+    border: 1px solid white;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.draggable {
+    cursor: move;
+}
+
+.note-label {
+    user-select: none; /* Standard syntax */
+    -webkit-user-select: none; /* Safari and Chrome syntax */
+    -ms-user-select: none; /* Internet Explorer syntax */
+}
+
+.rectangle.selected {
+    border: 2px solid red; /* Example style for selected rectangles */
+}
+
+#sweepLine {
+    position: absolute;
+    top: 100px; /* Adjust based on your grid's vertical start */
+    left: 20px; /* Starting at the beginning of your grid */
+    height: calc(100vh - 100px); /* Adjust based on your grid's height */
+    width: 2px;
+    background-color: red; /* Make it visible as a red line */
+    display: none; /* Start hidden */
+}
